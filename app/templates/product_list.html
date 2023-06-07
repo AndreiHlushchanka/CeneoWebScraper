@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="container">
+    <table class="table display" style="width: 100%;">
+        <thread>
+            <th>#</th>
+            <th>Produkt</th>
+            <th>Liczba opinii</th>
+            <th>Liczba wad</th>
+            <th>Liczba zalet</th>
+            <th>Średnia ocena</th>
+            <th>Pobierz</th>
+        </thread>
+        
+        <tbody>
+            <tr> 
+                <td>1</td>
+                <td role='button' class="text-primary"><a class="text-decoration-none" href="produkt">95319759</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>6</td>
+                <td>5.0</td>
+                <td><button>json</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
