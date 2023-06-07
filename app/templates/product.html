@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="table-responsive-xl table-striped p-5">
+    <table id="product_table" class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>ID opini</th>
+                <th>Autor</th>
+                <th>Rekomendacja</th>
+                <th>Liczba Gwiazdek</th>
+                <th>Czy potwierdzone zakupem</th>
+                <th>Data wystawiena opini</th>
+                <th>Data zakupu</th>
+                <th>Przydatne</th>
+                <th>Nieprzydatne</th>
+                <th>Opinia</th>
+                <th>Wady</th>
+                <th>Zalety</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>17159967</td>
+                <td>o...a</td>
+                <td>Polecam</td>
+                <td>4.5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2023-02-17 17:14:43</td>
+                <td>2023-02-01 09:52:49</td>
+                <td>1</td>
+                <td>0</td>
+                <td>Korzystam od około miesiąca. Niestety problemy ze zdrowiem nie pozwoliły mi sprawdzić zegarka pod kątem sportowo nawigacyjnym.
+                    Mogę jedna napisać kilka słów o komforcie. Wcześniej używałem opaski Mi Band. Potrzebowałem kilku dni to przyzwyczajenia się do rozmiaru zegarka. Nie było z tym większych problemów. Gorzej jeśli chodzi o wygodę oryginalnego paska. Ten powodował wrażenie odparzenia oraz naciskał na rękę w miejscu zapięcia. Nie mogłem się do tego przyzwyczaić. Na szczęście można znaleźć na serwisach aukcyjnych zastępcze paski. Ja zdecydowałem się na miękki pasek nylonowy zapinany na rzepy i był to strzał w dziesiątkę. Teraz właściwie nie czuję zegarka na ręce. Czy to za dnia, czy też nocą w łóżku.
+                    Oryginalny pasek pewnie przyda się przy aktywnościach sportowych. Rzepy mogłyby puścić w najmniej odpowiednim momencie.
+                    Jest też mały problem z odpowiedziami na wiadomości. Podejrzewam że to problem z moim telefonem a nie z zegarkiem (mam Redmi Note 10 Pro).</td>
+                <td></td>
+                <td>czas pracy na baterii
+                    funkcjonalność
+                    wyświetlacz</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>17058974</td>
+                <td>s...q</td>
+                <td>Polecam</td>
+                <td>5</td>
+                <td>Opinia potwierdzona zakupem</td>
+                <td>2023-01-25 11:03:51</td>
+                <td>2023-01-18 08:00:14</td>
+                <td>1</td>
+                <td>0</td>
+                <td>Zegarek użytkuję dopiero od tygodnia. Jest to mój pierwszy kontakt z systemem Garmin. Pierwsze wrażenia są bardzo dobre.
+                    Przesiadłem się z Galaxy Watch. Nie przeszkadza mi inny typ ekranu za to funkcje monitoringu aktywności to inna liga.
+                    Na siłę to trochę brakuje mi opcji synchronizacji alarmów (budzika) z telefonem i możliwości wyłączenia budzika przyciskiem Garmina oraz braku synchronizacji kalendarza w Garminie z kalendarzem w Google - przynajmniej nie znalazłem takiej opcji jak to ustawić. Co ciekawe przy poprzednim zegarku często używałem funkcji wyzwalania zdjęć wykonywanych telefonem za pomocą zegarka. Nie spodziewałem się tej funkcji ale instalując odpowiedni program tutaj również da się to robić.</td>
+                <td></td>
+                <td>czas pracy na baterii
+                    funkcjonalność
+                    wyświetlacz</td>
+        </tbody>
+    </table>
+  </div>
+  
+  <div class="m-5">
+    <button type="button" class="btn btn-primary">Pobierz plik json</button>
+    <button type="button" class="btn btn-primary" onclick="window.location='wykresy'">Wykresy</button>
+	</div>
+  
+{% endblock %}
+
+{% block js %}
+
+<script>
+    $(document).ready(function () {
+        $('#product_table').DataTable();
+    });
+</script>
+
+{% endblock %}
